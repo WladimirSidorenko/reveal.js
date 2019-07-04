@@ -56,7 +56,7 @@
 			progress: true,
 
 			// Display the page number of the current slide
-			slideNumber: false,
+			slideNumber: true,
 
 			// Determine which displays to show the slide number on
 			showSlideNumber: 'all',
@@ -718,8 +718,8 @@
 
 				// Inject slide numbers if `slideNumbers` are enabled
 				if( config.slideNumber && /all|print/i.test( config.showSlideNumber ) ) {
-					var slideNumberH = parseInt( slide.getAttribute( 'data-index-h' ), 10 ) + 1,
-						slideNumberV = parseInt( slide.getAttribute( 'data-index-v' ), 10 ) + 1;
+					var slideNumberH = parseInt( slide.getAttribute( 'data-index-h' ), 10 ),
+						slideNumberV = parseInt( slide.getAttribute( 'data-index-v' ), 10 );
 
 					var numberElement = document.createElement( 'div' );
 					numberElement.classList.add( 'slide-number' );
