@@ -2790,18 +2790,18 @@
 
 			switch( format ) {
 				case 'c':
-					value.push( getSlidePastCount() + 1 );
+					value.push( getSlidePastCount() );
 					break;
 				case 'c/t':
-					value.push( getSlidePastCount() + 1, '/', getTotalSlides() );
+					value.push( getSlidePastCount(), '/', getTotalSlides() );
 					break;
 				case 'h/v':
-					value.push( indexh + 1 );
-					if( isVerticalSlide() ) value.push( '/', indexv + 1 );
+					value.push( indexh );
+					if( isVerticalSlide() ) value.push( '/', indexv );
 					break;
 				default:
-					value.push( indexh + 1 );
-					if( isVerticalSlide() ) value.push( '.', indexv + 1 );
+					value.push( indexh );
+					if( isVerticalSlide() ) value.push( '.', indexv );
 			}
 
 			dom.slideNumber.innerHTML = formatSlideNumber( value[0], value[1], value[2] );
